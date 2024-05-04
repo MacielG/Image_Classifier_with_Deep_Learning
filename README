@@ -1,0 +1,45 @@
+Classificador de Imagens com Deep Learning
+
+#### Desenvolvido por:
+Guilherme Costantino Maciel, com o auxílio de técnicas avançadas providas pela tecnologia de Inteligência Artificial OpenAI ChatGPT para aprimoramento e refinamento dos códigos.
+
+#### Resumo do Projeto:
+Este projeto implementa um classificador de imagens utilizando uma Rede Neural Convolucional (CNN) para identificar e classificar imagens do conjunto de dados CIFAR-10. Utilizando técnicas de aprendizado profundo, o modelo é capaz de reconhecer dez diferentes categorias de objetos com precisão substancial.
+
+#### Funcionalidades Implementadas:
+1. **Arquitetura de CNN**: Definida em `simple_cnn.py`, a rede utiliza camadas convolucionais seguidas por max pooling e camadas totalmente conectadas.
+2. **Treinamento e Validação**: O modelo é treinado e validado em subconjuntos de dados, com implementação de parada antecipada para evitar overfitting.
+3. **Teste de Modelo**: Avaliação do modelo em um conjunto de teste separado para medir sua eficácia através de várias métricas estatísticas.
+4. **Matriz de Confusão e Métricas Detalhadas**: Utilização de `sklearn.metrics` para calcular e apresentar acurácia, precisão, recall, F1-score e gerar uma matriz de confusão detalhada.
+
+#### Potenciais Usos:
+- **Aplicações Educacionais**: Como recurso didático em cursos relacionados a ciência de dados e visão computacional.
+- **Desenvolvimento de Produtos**: Implementação em sistemas de reconhecimento visual em vários setores industriais.
+- **Pesquisa Acadêmica**: Base para estudos avançados em classificação de imagem e redes neurais.
+
+#### Instruções de Uso e Personalização:
+1. **Alteração da Fonte de Dados de Treinamento**:
+   - Modifique a carga de dados no `classifier.py`.
+   - Para usar um novo conjunto de dados, ajuste o caminho no método `torchvision.datasets`.
+   - Assegure que qualquer novo conjunto de dados esteja formatado adequadamente, ou ajuste as transformações aplicadas no carregamento dos dados.
+
+2. **Personalização da Rede**:
+   - Alterações na arquitetura podem ser feitas em `simple_cnn.py`.
+   - Modifique o número de camadas, filtros convolucionais, ou adicione novas técnicas como Dropout ou Batch Normalization conforme necessário.
+
+3. **Treinamento**:
+   - Execute `classifier.py` para iniciar o treinamento.
+   - Ajustes podem ser feitos em termos de número de épocas, taxa de aprendizado, e outros hiperparâmetros.
+
+4. **Teste**:
+   - Após o treinamento, use `test_model.py` para avaliar o modelo.
+   - Este script carrega o modelo, executa o teste no conjunto de teste, e exibe as métricas e a matriz de confusão.
+
+#### Resultados Obtidos:
+- O modelo alcançou uma acurácia de 63.40% no conjunto de teste CIFAR-10, com performance destacada em categorias como 'Carro' e 'Navio'. As métricas detalhadas foram calculadas usando a biblioteca `sklearn.metrics`, que revelou insights sobre as forças e fraquezas do modelo em várias categorias.
+
+#### Ferramentas para Testes e Análise:
+- **Matriz de Confusão**: Fornece insights sobre o desempenho do modelo em cada categoria, mostrando não apenas as previsões corretas, mas também onde o modelo confunde uma classe com outra.
+- **Métricas de Avaliação**: Acurácia, precisão, recall, e F1-score são calculados para fornecer uma análise completa da performance do modelo.
+
+Este projeto serve como uma demonstração do uso de redes neurais convolucionais para classificação de imagens, mostrando a aplicabilidade da inteligência artificial em tarefas complexas de visão computacional.
